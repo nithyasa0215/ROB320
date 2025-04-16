@@ -4,10 +4,6 @@
 #include <ctype.h>
 
 
-
-extern int sigint_flag;
-void signal_handler(int);
-
 int main(int argc, char *argv[]) {
     if (argc != 5) {
         fprintf(stderr, "Usage: %s <use_serial> <start_dir> <speed> <delay_ms>\n", argv[0]);

@@ -9,9 +9,6 @@
 #include <stdio.h>
 
 
-extern int sigint_flag;
-void signal_handler(int);
-
 int main() {
     // TODO: Set up signal handler for SIGINT
     /*struct sigaction sa;
@@ -30,7 +27,7 @@ int main() {
 
     const char *fifo_name = "/tmp/teleop_cmd";
     if (mkfifo(fifo_name, 0666) == -1) {
-        //perror("mkfifo");
+        perror("mkfifo");
         exit(1);
     }
 

@@ -191,6 +191,7 @@ void drive_square(int fd, char start_dir, float speed, int delay_ms) {
             //cmd.vy = 1;
             cmd.vy = speed;
             write(fd, &cmd, sizeof(cmd));
+            usleep(delay);
             break;
 
             case 'E':
@@ -287,13 +288,15 @@ void convert_keys_to_drive_commands(int in_fd, int out_fd) {
 
 
 
-    while ((sigint_flag != -1)) {
+    while ((sigint_flag == 0)) {
 
         usleep(1000);
         readLine = read(in_fd, &key, 1);
 
-        if(readLine <= 0) {
+        if(readLine < 0) {
             break;
+        } else if(readLine == 0) {
+            continue;
         }
 
 

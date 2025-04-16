@@ -5,9 +5,6 @@
 
 // the same set up as the previous files
 
-extern int sigint_flag;
-void signal_handler(int);
-
 int main(int argc, char** argv) {
     if (argc != 2) {
         fprintf(stderr, "Usage: %s <use_serial>\n", argv[0]);

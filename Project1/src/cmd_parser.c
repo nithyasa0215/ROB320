@@ -3,11 +3,6 @@
 #include <signal.h>
 #include <ctype.h>
 
-
-extern int sigint_flag;
-void signal_handler(int);
-
-
 int main() {
     // TODO: Set up signal handler for SIGINT
     signal(SIGINT, signal_handler);
