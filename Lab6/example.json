@@ -1,0 +1,9 @@
+{
+    "my_integer": 123,
+    "my_string": "ROB320!",
+    "my_array": [4, 5, 6],
+    "my_object": {
+        "my_bool": true,
+        "my_float": 3.14
+    }
+}

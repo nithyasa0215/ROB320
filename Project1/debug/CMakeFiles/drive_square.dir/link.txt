@@ -1,0 +1,1 @@
+/usr/bin/cc -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/drive_square.dir/src/drive_square.c.o CMakeFiles/drive_square.dir/src/util.c.o -o drive_square  librobot.a -lm

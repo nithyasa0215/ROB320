@@ -1,0 +1,56 @@
+{
+    "name": "my_robot",
+    "links": [
+      {
+        "name": "base",
+        "visual": {
+          "geometry": { "type": "box", "size": [1.0, 0.1, 0.1] }
+        }
+      },
+      {
+        "name": "upper_arm",
+        "visual": {
+          "geometry": { "type": "box", "size": [1.0, 0.1, 0.1] },
+          "origin": { "xyz": [0.5, 0, 0], "rpy": [0, 0.785398, 0] }
+        }
+      },
+      {
+        "name": "forearm",
+        "visual": {
+          "geometry": { "type": "box", "size": [1.0, 0.1, 0.1] },
+          "origin": { "xyz": [0.5, 0, 0], "rpy": [0, -0.785398, 0] }
+        }
+      },
+      {
+        "name": "hand",
+        "visual": {
+          "geometry": { "type": "box", "size": [0.1, 0.1, 0.1] }
+        }
+      }
+    ],
+    "joints": [
+      {
+        "name": "shoulder",
+        "type": "revolute",
+        "parent": "base",
+        "child": "upper_arm",
+        "axis": [0, 1, 0]
+      },
+      {
+        "name": "elbow",
+        "type": "revolute",
+        "parent": "upper_arm",
+        "child": "forearm",
+        "origin": { "xyz": [0.5, 0, 0], "rpy": [0, 0, 0] },
+        "axis": [0, 1, 0]
+      },
+      {
+        "name": "wrist",
+        "type": "prismatic",
+        "parent": "forearm",
+        "child": "hand",
+        "origin": { "xyz": [0.5, 0, 0], "rpy": [0, 0, 0] },
+        "axis": [1, 0, 0]
+      }
+    ]
+  }

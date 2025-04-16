@@ -1,0 +1,1 @@
+/usr/bin/cc -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmd_parser.dir/src/cmd_parser.c.o CMakeFiles/cmd_parser.dir/src/util.c.o -o cmd_parser  librobot.a -lm

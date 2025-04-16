@@ -1,0 +1,76 @@
+{
+  "name": "simple_bot",
+  "links": [
+    {
+      "name": "base",
+      "visual": {
+        "geometry": {
+          "type": "box",
+          "size": [1.0, 0.5, 0.5]
+        },
+        "origin": {
+          "xyz": [0, 1.0, 0],
+          "rpy": [0, 0, 0]
+        }
+      }
+    },
+    {
+      "name": "upper_arm",
+      "visual": {
+        "geometry": {
+          "type": "box",
+          "size": [1.0, 0.5, 0.5]
+        },
+        "origin": {
+          "xyz": [1.0, 0, 0],
+          "rpy": [0, 0, 0]
+        }
+      }
+    },
+    {
+      "name": "forearm",
+      "visual": {
+        "geometry": {
+          "type": "box",
+          "size": [1.0, 0.5, 0.5]
+        },
+        "origin": {
+          "xyz": [1.0, 0, 0],
+          "rpy": [0, 0, 0]
+        }
+      }
+    }
+  ],
+  "joints": [
+    {
+      "name": "base_to_upper_arm",
+      "type": "revolute",
+      "parent": "base",
+      "child": "upper_arm",
+      "origin": {
+        "xyz": [1.0, 0, 0.0],
+        "rpy": [0, 0, 0]
+      },
+      "axis": [0, 1, 0],
+      "limits": {
+        "lower": -3.14159,
+        "upper": 3.14159
+      }
+    },
+    {
+      "name": "upper_arm_to_forearm",
+      "type": "revolute",
+      "parent": "upper_arm",
+      "child": "forearm",
+      "origin": {
+        "xyz": [1.0, 0, 0],
+        "rpy": [0, 0, 0]
+      },
+      "axis": [0, 0, 1],
+      "limits": {
+        "lower": -3.14159,
+        "upper": 3.14159
+      }
+    }
+  ]
+}

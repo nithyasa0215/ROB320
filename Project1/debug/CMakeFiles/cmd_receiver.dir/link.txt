@@ -1,0 +1,1 @@
+/usr/bin/cc -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmd_receiver.dir/src/cmd_receiver.c.o CMakeFiles/cmd_receiver.dir/src/util.c.o -o cmd_receiver  librobot.a -lm
